@@ -1,20 +1,18 @@
 package com.example.demo.todo;
 
+import com.example.demo.todo.model.TodoList;
+import com.example.demo.todo.repo.TodoRepo;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.context.annotation.Bean;
 
-public class todoConfig {
+public class TodoConfig {
 
     @Bean
     CommandLineRunner commandLineRunner(
-            todoRepo repository) {
+            TodoRepo repository) {
         return args -> {
-            new todoList(
-                    1,
-               1,
-               "sadasd",
-               "10.11.2021",
-               "12.11.2021"
+            new TodoList(
+
             );
         };
     }
