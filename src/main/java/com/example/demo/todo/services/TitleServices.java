@@ -1,7 +1,7 @@
 package com.example.demo.todo.services;
 
 
-import com.example.demo.todo.model.TodoList;
+import com.example.demo.todo.model.Titles;
 import org.springframework.beans.factory.annotation.Autowired;
 
 public class TitleServices {
@@ -15,9 +15,9 @@ public class TitleServices {
     }
 
 
-    public static TodoList save(TodoList todoItem) {
+    public static Titles save(Titles titleItem) {
 
-        return todoItem;
+        return titleItem;
     }
 
     public static void deleteById(Long id) {

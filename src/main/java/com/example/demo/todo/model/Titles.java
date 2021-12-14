@@ -16,16 +16,15 @@ import java.util.List;
 @NoArgsConstructor
 
 public class Titles {
-
-
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int title_id;
+    private Integer title_id;
 
-    @Column(name = "yapılacaklar")
-    private String yapılacaklar;
+    @Column(name = "yapilacaklar")
+    private String yapilacaklar;
+
+    @OneToMany(targetEntity = Titles.class)
+    private List<TodoList> TodoListEntityList;
 
 
-    @OneToMany(mappedBy = "title")
-    private List<TodoList> toDoListEntityList;
 }

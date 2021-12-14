@@ -1,6 +1,6 @@
 package com.example.demo.todo.controller;
 
-import com.example.demo.todo.model.TodoList;
+import com.example.demo.todo.model.Titles;
 import com.example.demo.todo.services.TitleServices;
 import com.sun.istack.NotNull;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -18,19 +18,20 @@ public class TitleController {
     }
 
     @PostMapping
-    public TodoList save(@Validated @NotNull @RequestBody TodoList todoItem){
+    public Titles save(@Validated @NotNull @RequestBody Titles titlesItem){
 
-        return TitleServices.save(todoItem);
+        return TitleServices.save(titlesItem);
     }
 
     @PutMapping
-    public TodoList update(@Validated @NotNull @RequestBody TodoList todoItem) {
+    public Titles update(@Validated @NotNull @RequestBody Titles titlesItem) {
 
-        return TitleServices.save(todoItem);
+        return TitleServices.save(titlesItem);
     }
 
     @DeleteMapping(value = "/{id}")
     public void delete(@PathVariable Long id){
+
         TitleServices.deleteById(id);
     }
 }
